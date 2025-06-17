@@ -73,6 +73,7 @@ body {
                             left: 44%;
                         }
                         .card-head {
+                            overflow: hidden;
                             background-color: green;
                             height: 75%
                         }
