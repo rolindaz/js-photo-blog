@@ -2,32 +2,38 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-};
+}
 
 img {
     max-width: 100%;
     vertical-align: middle
-};
+}
 
 :root {
-    --title-dark: black;
-    --text-dark: #212438;
-    --photo-bg: white;
+    --pb-title-dark: black;
+    --pb-text-dark: #212438;
+    --pb-photo-bg: white;
 
-    --ws-title-font-family: 'Edu TAS Beginner', sans-serif;
-    --ws-body-font-family: "Sometype Mono", monospace;
-};
+    --pb-title-font-family: 'Edu TAS Beginner', sans-serif;
+    --pb-body-font-family: "Sometype Mono", monospace;
+}
 
 .container {
     max-width: 540px;
     margin: 0 auto;
-    text-align: center;
-};
+}
 
 .row {
+    padding: 2rem 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.col-12 {
+    margin: 0 auto;
+    width: 50%;
 }
 
 body {
@@ -39,16 +45,39 @@ body {
         .container {
             text-align: center;
             h1 {
-                color: var(--title-dark);
-                font-family: var(--ws-title-font-family);
+                color: var(--pb-title-dark);
+                font-family: var(--pb-title-font-family);
                 text-transform: uppercase;
-            };
-        };
-    };
+            }
+        }
+    }
     main {
         min-height: 700px;
         background-image: url(../img/cork.png);
         background-size: cover;
         background-repeat: no-repeat;
+        .container {
+            .row {
+                .col-12 {
+                    .card {
+                        height: 300px;
+                        padding: 1rem 1rem 0;
+                        background-color: var(--pb-photo-bg);
+                        .card-head {
+                            height: 80%
+                        }
+                        .card-body {
+                            height: 20%;
+                            padding: 1rem 0;
+                            text-align: justify;
+                            span {
+                                text-transform: capitalize;
+                                color: var(--pb-text-dark);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-};
+}
