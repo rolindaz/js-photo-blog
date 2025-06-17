@@ -6,7 +6,7 @@ fetch(endpointUrl)
 .then(data => {
     console.log(data);
     let rowElHTML;
-    data.forEach(obj => {
+    data.forEach((obj)=>{
         const {
             title,
             date,
@@ -29,7 +29,7 @@ fetch(endpointUrl)
                             </div>
                         </div>
                     </div>
-        `;
+                `;
         rowElHTML += photoMarkup;
     });
     rowEl.insertAdjacentHTML('beforeend', rowElHTML);
