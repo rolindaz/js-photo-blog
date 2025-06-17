@@ -6,10 +6,49 @@
 
 img {
     max-width: 100%;
+    vertical-align: middle
 };
 
 :root {
     --title-dark: black;
     --text-dark: #212438;
     --photo-bg: white;
+
+    --ws-title-font-family: 'Edu TAS Beginner', sans-serif;
+    --ws-body-font-family: "Sometype Mono", monospace;
+};
+
+.container {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+};
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    header {
+        padding: 1rem 0;
+        background-image: url(../img/wall.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        .container {
+            text-align: center;
+            h1 {
+                color: var(--title-dark);
+                font-family: var(--ws-title-font-family);
+                text-transform: uppercase;
+            };
+        };
+    };
+    main {
+        min-height: 700px;
+        background-image: url(../img/cork.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 };
