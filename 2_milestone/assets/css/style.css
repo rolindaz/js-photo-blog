@@ -32,8 +32,8 @@ img {
 }
 
 .col-12 {
-    margin: 0 auto;
-    width: 50%;
+    margin: 0 20%;
+    width: 100%;
 }
 
 body {
@@ -73,6 +73,7 @@ body {
                             left: 44%;
                         }
                         .card-head {
+                            overflow: hidden;
                             background-color: green;
                             height: 75%
                         }
