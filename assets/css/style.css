@@ -15,7 +15,7 @@ img {
     --pb-photo-bg: white;
 
     --pb-title-font-family: 'Edu TAS Beginner', sans-serif;
-    --pb-body-font-family: "Sometype Mono", monospace;
+    --pb-body-font-family: 'Sometype Mono', monospace;
 }
 
 .container {
@@ -45,6 +45,7 @@ body {
         .container {
             text-align: center;
             h1 {
+                font-size: 60px;
                 color: var(--pb-title-dark);
                 font-family: var(--pb-title-font-family);
                 text-transform: uppercase;
@@ -60,19 +61,29 @@ body {
             .row {
                 .col-12 {
                     .card {
+                        position: relative;
                         height: 300px;
                         padding: 1rem 1rem 0;
                         background-color: var(--pb-photo-bg);
+                        #pin {
+                            width: 12%;
+                            position: absolute;
+                            top: -8px;
+                            left: 44%;
+                        }
                         .card-head {
-                            height: 80%
+                            background-color: green;
+                            height: 75%
                         }
                         .card-body {
-                            height: 20%;
+                            height: 25%;
                             padding: 1rem 0;
                             text-align: justify;
                             span {
+                                font-size: 12px;
                                 text-transform: capitalize;
                                 color: var(--pb-text-dark);
+                                font-family: var(--pb-body-font-family);
                             }
                         }
                     }
