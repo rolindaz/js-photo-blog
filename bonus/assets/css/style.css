@@ -31,7 +31,6 @@ img {
 }
 
 .row {
-    margin: 0 -1rem;
     padding: 2rem 0;
     width: 100%;
     display: flex;
@@ -41,12 +40,14 @@ img {
 .col-12 {
     padding: 1rem;
     width: 100%;
+    margin: 0 auto;
 }
 
 .card {
     position: relative;
     max-width: 350px;
     height: 300px;
+    margin: 0 auto;
     padding: 1rem;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.598);
     background-color: var(--pb-photo-bg);
@@ -90,7 +91,7 @@ img {
     }
 
     main {
-        min-height: 800px;
+        min-height: 1200px;
         background-image: url(../img/cork.png);
         background-size: cover;
         background-repeat: no-repeat;
