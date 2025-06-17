@@ -5,7 +5,7 @@ fetch(endpointUrl)
 .then(res => res.json())
 .then(data => {
     console.log(data);
-    let rowElHTML;
+    let rowElHTML = ''
     data.forEach((obj)=>{
         const {
             title,
