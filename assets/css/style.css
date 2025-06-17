@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+};
+
+img {
+    max-width: 100%;
+};
+
+:root {
+    --title-dark: black;
+    --text-dark: #212438;
+    --photo-bg: white;
+};
