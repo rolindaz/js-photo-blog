@@ -1,3 +1,5 @@
+/* #region General */
+
 * {
     padding: 0;
     margin: 0;
@@ -18,23 +20,32 @@ img {
     --pb-body-font-family: 'Sometype Mono', monospace;
 }
 
+/* #endregion General */
+
+/* #region Utilities */
+
 .container {
     max-width: 540px;
+    width: 80%;
     margin: 0 auto;
 }
 
 .row {
+    margin: 0 -1rem;
     padding: 2rem 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
 }
 
 .col-12 {
-    margin: 0 20%;
+    padding: 1rem;
     width: 100%;
 }
+
+/* #endregion Utilities */
+
+/* #region HTML */
 
 body {
     header {
@@ -65,6 +76,7 @@ body {
                         position: relative;
                         height: 300px;
                         padding: 1rem;
+                        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.598);
                         background-color: var(--pb-photo-bg);
                         #pin {
                             width: 12%;
@@ -92,5 +104,31 @@ body {
                 }
             }
         }
+    }
+}
+
+/* #endregion HTML */
+
+/* #region Responsive */
+
+/* Tablet Mode - MD (>=768px) */
+
+@media screen and (min-width: 768px) {
+    .col-md-6 {
+        width: calc(100% / 12 * 6);
+    }
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Desktop Mode - LG (>=992px) */
+
+@media screen and (min-width: 992px) {
+    .col-lg-4 {
+        width: calc(100% / 12 * 4);
+    }
+    .container {
+        max-width: 960px;
     }
 }

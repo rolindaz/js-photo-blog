@@ -66,6 +66,7 @@ body {
                         height: 300px;
                         padding: 1rem;
                         background-color: var(--pb-photo-bg);
+                        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.598);
                         #pin {
                             width: 12%;
                             position: absolute;

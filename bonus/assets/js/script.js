@@ -13,7 +13,7 @@ fetch(endpointUrl)
             url
         } = data;
         const photoMarkup = `
-                    <div class="col-12 col-6 col-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
                             <img id="pin" src="./assets/img/pin.svg" alt="Pin">
                             <div class="card-head">
