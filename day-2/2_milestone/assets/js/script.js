@@ -2,6 +2,8 @@ const endpointUrl = 'https://lanciweb.github.io/demo/api/pictures/';
 const rowEl = document.querySelector('.row');
 // prendo l'elemento della DOM che voglio che ricompaia, cioè l'overlay
 const overlayEl = document.getElementById('overlay');
+// prendo anche l'elemento che deve controllare la chiusura dell'overlay, cioè l'x-mark
+const closeMarkEl = document.getElementById('close-mark');
 
 fetch(endpointUrl)
 .then(res => res.json())
@@ -54,11 +56,11 @@ fetch(endpointUrl)
         photoEl.addEventListener('click', ()=>{
             overlayEl.classList.remove('d-none');
         });
+        // Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
+        closeMarkEl.addEventListener('click', ()=>{
+            overlayEl.classList.add('d-none');
+        });
     });
 });
-
-
-
-// devo associare un add event listener alle foto così da assegnare un display block (tramite una classe) al div dell'overlay
 
 
