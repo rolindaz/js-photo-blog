@@ -51,6 +51,12 @@ img {
     padding: 1rem;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.598);
     background-color: var(--pb-photo-bg);
+    &:hover {
+        transform: scale(1.1);
+        rotate: 10deg;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.761);
+        cursor: pointer;
+    }
     .card-head {
         overflow: hidden;
         background-color: green;
@@ -83,7 +89,7 @@ img {
     left: 0; top: 0;
     overflow: auto;
     width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.419);
+    background: rgba(0, 0, 0, 0.583);
     #modal {
         position:relative;
         margin: 50% auto;
@@ -93,6 +99,9 @@ img {
             position: absolute;
             right: .3rem; top: .25rem;
             z-index: 100;
+            &:hover {
+                cursor: pointer;
+            }
             i {
                 font-size: 30px;
                 color: white;
