@@ -93,7 +93,7 @@ img {
     #modal {
         position:relative;
         margin: 50% auto;
-        width: 50vw; height: 50vh;
+        width: 50%; height: 60%;
         overflow: hidden;
         #close-mark {
             position: absolute;
@@ -136,7 +136,7 @@ img {
             .row {
                 .col-12 {
                     .card {
-                        #pin {
+                        .pin {
                             width: 10%;
                             position: absolute;
                             top: -8px;
