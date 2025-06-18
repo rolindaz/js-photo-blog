@@ -1,36 +1,64 @@
 const endpointUrl = 'https://lanciweb.github.io/demo/api/pictures/';
 const rowEl = document.querySelector('.row');
+// prendo l'elemento della DOM che voglio che ricompaia, cioè l'overlay
+const overlayEl = document.getElementById('overlay');
 
 fetch(endpointUrl)
 .then(res => res.json())
 .then(data => {
     console.log(data);
-    let rowElHTML = ''
     data.forEach((obj)=>{
         const {
             title,
             date,
             url
         } = data;
-        const photoMarkup = `
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img id="pin" src="./assets/img/pin.svg" alt="Pin">
-                            <div class="card-head">
-                                <img src=${obj.url} alt="${obj.title}">
-                            </div>
-                            <div class="card-body">
-                                <span>
-                                    ${obj.title}
-                                </span>
-                                <span>
-                                    ${obj.date}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-        rowElHTML += photoMarkup;
+        // creazione elementi della DOM
+        const colEl = document.createElement('div');
+        colEl.classList.add('col-12', 'col-md-6', 'col-lg-4');
+        console.log(colEl);
+        const cardEl = document.createElement('div');
+        cardEl.classList.add('card');
+        console.log(cardEl);
+        const pinEl = document.createElement('img');
+        pinEl.src = "./assets/img/pin.svg";
+        pinEl.alt = 'Pin';
+        pinEl.id = 'pin';
+        console.log(pinEl);
+        const cardHeadEl = document.createElement('div');
+        cardHeadEl.classList.add('card-head');
+        console.log(cardHeadEl);
+        const photoEl = document.createElement('img');
+        photoEl.src = obj.url;
+        photoEl.alt = obj.title;
+        console.log(photoEl);
+        const cardBodyEl = document.createElement('div');
+        cardBodyEl.classList.add('card-body');
+        console.log(cardBodyEl);
+        const photoTitle = document.createElement('span');
+        photoTitle.textContent = obj.title;
+        console.log(photoTitle);
+        const photoDate = document.createElement('span');
+        photoDate.textContent = obj.date;
+        console.log(photoDate);
+        rowEl.appendChild(colEl);
+        console.log(rowEl);
+        colEl.appendChild(cardEl);
+        cardEl.appendChild(pinEl);
+        cardEl.appendChild(cardHeadEl);
+        cardEl.appendChild(cardBodyEl)
+        cardHeadEl.appendChild(photoEl);
+        cardBodyEl.appendChild(photoTitle);
+        cardBodyEl.appendChild(photoDate);
+        // facciamo sì che cliccando una qualunque foto, l’overlay ricompaia.
+        photoEl.addEventListener('click', ()=>{
+            overlayEl.classList.remove('d-none');
+        });
     });
-    rowEl.insertAdjacentHTML('beforeend', rowElHTML);
 });
+
+
+
+// devo associare un add event listener alle foto così da assegnare un display block (tramite una classe) al div dell'overlay
+
+

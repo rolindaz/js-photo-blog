@@ -70,6 +70,10 @@ img {
     }
 }
 
+.d-none {
+    display: none;
+}
+
 /* #endregion Utilities */
 
 /* #region HTML */
