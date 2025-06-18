@@ -1,9 +1,9 @@
 const endpointUrl = 'https://lanciweb.github.io/demo/api/pictures/';
 const rowEl = document.querySelector('.row');
-// prendo l'elemento della DOM che voglio che ricompaia, cioè l'overlay
 const overlayEl = document.getElementById('overlay');
-// prendo anche l'elemento che deve controllare la chiusura dell'overlay, cioè l'x-mark
 const closeMarkEl = document.getElementById('close-mark');
+// prendo l'elemento della DOM di cui voglio modificare l'origine, cioè la foto contenuta nella modale
+const modalImgEl = document.getElementById('modal-img');
 
 fetch(endpointUrl)
 .then(res => res.json())
@@ -52,11 +52,12 @@ fetch(endpointUrl)
         cardHeadEl.appendChild(photoEl);
         cardBodyEl.appendChild(photoTitle);
         cardBodyEl.appendChild(photoDate);
-        // facciamo sì che cliccando una qualunque foto, l’overlay ricompaia.
+        // quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
         photoEl.addEventListener('click', ()=>{
             overlayEl.classList.remove('d-none');
+            modalImgEl.src = obj.url;
+            modalImgEl.alt = obj.title;
         });
-        // Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
         closeMarkEl.addEventListener('click', ()=>{
             overlayEl.classList.add('d-none');
         });
