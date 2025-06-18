@@ -75,6 +75,7 @@ img {
 /* #region HTML */
 
 #overlay {
+    display: none;
     position: fixed;
     left: 0; top: 0;
     overflow: auto;
