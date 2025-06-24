@@ -8,7 +8,7 @@
 
 img {
     max-width: 100%;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 :root {
@@ -58,6 +58,9 @@ img {
         cursor: pointer;
     }
     .card-head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
         background-color: green;
         height: 85%
@@ -141,6 +144,12 @@ img {
                             position: absolute;
                             top: -8px;
                             left: 44%;
+                        }
+                        .card-head {
+                            img {
+                                flex-shrink: 0;
+                                min-width: 100%; min-height: 100%;
+                            }
                         }
                     }
                 }

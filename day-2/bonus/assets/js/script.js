@@ -25,7 +25,7 @@ fetch(endpointUrl)
         const pinEl = document.createElement('img');
         pinEl.src = "./assets/img/pin.svg";
         pinEl.alt = 'Pin';
-        pinEl.classList.add = 'pin';
+        pinEl.classList.add('pin');
         console.log(pinEl);
         const cardHeadEl = document.createElement('div');
         cardHeadEl.classList.add('card-head');
